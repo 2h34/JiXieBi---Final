@@ -120,8 +120,8 @@ static void BlockArm_SetAutoTarget(BlockArmTarget_t target)
         case BLOCK_ARM_TARGET_SECOND_PICK_READY:
             block_arm.fine_adjust_profile = BLOCK_ARM_FINE_PROFILE_SECOND_PICK;
             /* TODO: 写入二层取块姿态对应的 DJI / ZDrive 目标。 */
-            block_arm.dji_target_position = 40.0f;  
-            block_arm.zdrive_target_position = 50.0f;
+            block_arm.dji_target_position = 20.0f;  
+            block_arm.zdrive_target_position = 45.0f;
             break;
 
         case BLOCK_ARM_TARGET_PLACE_BOTTOM_READY:

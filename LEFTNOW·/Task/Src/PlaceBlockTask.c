@@ -70,11 +70,6 @@ void PlaceBlockTask_StartLevel2(void)
 
 void PlaceBlockTask_ConfirmRelease(void)
 {
-    if (place_block_task_state != PLACE_BLOCK_TASK_MANUAL_ALIGN)
-    {
-        return;
-    }
-
     BlockArm_StopFineAdjust();
     BlockVacuum_Release();
     place_block_task_state = PLACE_BLOCK_TASK_RELEASE;
