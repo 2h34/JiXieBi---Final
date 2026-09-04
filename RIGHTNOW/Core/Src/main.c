@@ -115,7 +115,7 @@ int main(void)
   Beep_Init();
   CAN_InitSendQueue();
   // UART_Start_Recieve();
-  solenoid_init(1);
+  solenoid_init(2U);
   #if USE_DJ
   DJmotor_Init();
   #endif

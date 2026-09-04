@@ -16,6 +16,7 @@ uint8_t flag3 = 0;
 uint8_t flag4 = 0;
 uint8_t flag5 = 0;
 uint8_t flag6 = 0;
+uint8_t flag7 = 0;
 
 void LedWaterTask(void *argument)
 {
@@ -262,8 +263,13 @@ void BlockArmServiceTask(void *argument)
     }
     if (flag6 == 1)
     {
-      solenoid_on(1U, 0x00U);
+      solenoid_on(2U, 0x0FU);
       flag6 = 0;
+    }
+    if (flag7 == 1)
+    {
+      solenoid_on(2U, 0x00U);
+      flag7 = 0;
     }
     next_wake += BLOCK_ARM_PROCESS_PERIOD_MS;
     osDelayUntil(next_wake);

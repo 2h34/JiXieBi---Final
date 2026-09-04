@@ -15,6 +15,8 @@ extern uint8_t flag3;
 extern uint8_t flag4;
 extern uint8_t flag5;
 extern uint8_t flag6;
+extern uint8_t flag7;
+
 
 volatile extern uint8_t Master_Command;
 // 主机命令

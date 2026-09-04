@@ -120,7 +120,7 @@ int main(void)
   DJmotor_Init();
   #endif
   #if USE_ZMDR
-  ZdriveInit();
+  ZdriveInit();						
   #endif
 
   /* 机构层 */

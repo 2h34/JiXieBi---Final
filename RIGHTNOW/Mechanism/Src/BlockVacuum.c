@@ -16,7 +16,7 @@ void BlockVacuum_Init(void)
     block_vacuum.grab_count = 0U;
     block_vacuum.release_count = 0U;
 
-    solenoid_on(1U, 0x00U);
+    solenoid_on(2U, 0x00U);
 }
 
 void BlockVacuum_Grab(void)
@@ -30,7 +30,7 @@ void BlockVacuum_Grab(void)
     block_vacuum.state = BLOCK_VACUUM_GRABBING;
 
     /* TODO: 向真实泵阀 Driver 发出建立真空命令。 */
-    solenoid_on(1U, 0x0FU);
+    solenoid_on(2U, 0x0FU);
 }
 
 void BlockVacuum_Release(void)
@@ -44,7 +44,7 @@ void BlockVacuum_Release(void)
     block_vacuum.state = BLOCK_VACUUM_RELEASING;
 
     /* TODO: 向真实泵阀 Driver 发出释放真空命令。 */
-    solenoid_on(1U, 0x00U);
+    solenoid_on(2U, 0x00U);
 }
 
 BlockVacuumState_t BlockVacuum_GetState(void)
@@ -89,7 +89,7 @@ void BlockVacuum_Process(void)
 
 void BlockVacuum_Reset(void)
 {
-    solenoid_on(1U, 0x00U);
+    solenoid_on(2U, 0x00U);
 
     block_vacuum.grab_count = 0U;
     block_vacuum.release_count = 0U;
