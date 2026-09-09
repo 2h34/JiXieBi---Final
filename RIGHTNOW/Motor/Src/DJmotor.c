@@ -120,8 +120,8 @@ void DJmotor_Init(void)
 
     for (uint32_t i = 0; i < USE_DJNUM; i++)
     {
-        PID_Init(&DJmotor[i].posPID, 0.4f, 0.13f, 0.035f, PIDPOS);
-        PID_Init(&DJmotor[i].velPID, 7.0f, 0.2f, 0.0f, PIDINC);
+        PID_Init(&DJmotor[i].posPID, 0.4f, 0.13f, 0.07f, PIDPOS);
+        PID_Init(&DJmotor[i].velPID, 7.0f, 0.4f, 0.0f, PIDINC);
     }
 }
 

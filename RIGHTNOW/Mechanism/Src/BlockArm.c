@@ -141,7 +141,7 @@ static void BlockArm_SetAutoTarget(BlockArmTarget_t target)
         case BLOCK_ARM_TARGET_PLACE_LEVEL2_READY:
             block_arm.fine_adjust_profile = BLOCK_ARM_FINE_PROFILE_PLACE_LEVEL2;
             /* TODO: 写入第二层放块姿态对应的 DJI / ZDrive 目标。 */
-            block_arm.dji_target_position = -82.0f;  
+            block_arm.dji_target_position = -84.0f;  
             block_arm.zdrive_target_position = 44.0f;
             break;
 
@@ -155,7 +155,7 @@ static void BlockArm_SetAutoTarget(BlockArmTarget_t target)
             // else
             // {
             //     /* 其他粗定位姿态的通用安全位置 */ // }
-            block_arm.dji_target_position = -20.0f;  /* 实测角度 */
+            block_arm.dji_target_position = -25.0f;  /* 实测角度 */
             block_arm.zdrive_target_position = 40.0f;  /* 实测角度 */
            
             block_arm.fine_adjust_profile = BLOCK_ARM_FINE_PROFILE_NONE;
